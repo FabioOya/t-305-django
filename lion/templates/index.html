@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script defer src="{% static 'js/script.js' %}"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p>O nome do usuario é {{nome}}</p>
+    {% if nome == "Fabio" %}
+        <p>sim, essa é a pagina do Fabio</p>
+    {% elif nome == "joao" %}
+        <p>sim, essa é a pagina do joão</p>
+    {% else %}
+        <p>essa pagina não é de ngm conhecido</p>
+    {% endif %}
+    <h1>Esses são nossos dogs <h1>
+    <ul>
+    {% for dog in cachorros %}
+        <li>{{dog}}</li>
+    {% endfor %}
+
+    <h1>aaaa</h1>
+    <h3>ooOOOO</h3>
+</body>
+</html>
